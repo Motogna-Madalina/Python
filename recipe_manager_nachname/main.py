@@ -1,1 +1,0 @@
-print("Herzlich Willkommen beim besten Rezepte-Manager der Welt!")
