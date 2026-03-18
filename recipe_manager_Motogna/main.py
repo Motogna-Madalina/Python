@@ -1,5 +1,6 @@
 
 from data_all_recipes import all_recipes
+from add_recipe import add_recipe
 from user_ingredients import user_ingredients
 from find_recipes import find_recipes
 
@@ -38,6 +39,8 @@ def menu_options():
         elif choice == "B":
             search_recipes()
         elif choice == "C":
+            add_recipe()
+        elif choice == "D":
             print("Programm beendet. Auf Wiedersehen!")
             break
         else:
