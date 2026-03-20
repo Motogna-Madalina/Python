@@ -1,5 +1,5 @@
 
-
+from data_all_recipes import all_recipes
 # This file contains the function to get user input for ingredients
 # and clean it for recipe searching.
 
@@ -27,3 +27,22 @@ def user_ingredients():
         #lower() converts the keyword to lowercase, making the search case-insensitive and more flexible when matching user ingredients with recipe ingredients.
         #keyword wird zur Liste der bereinigten Zutaten hinzugefügt, die für die Rezeptsuche
         #verwendet wird
+
+def find_recipes():
+
+    user_ing = user_ingredients()
+
+    print("\nPassende Rezepte:")
+    found = False
+
+    for recipe in all_recipes:
+        for ingredient in all_recipes[recipe]["zutaten"]:
+            last_word = ingredient.split()[-1].lower()
+
+            if last_word in user_ing:
+                print("-", recipe)
+                found = True
+                break
+
+    if not found:
+        print("Keine passenden Rezepte gefunden.")
