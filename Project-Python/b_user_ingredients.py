@@ -28,7 +28,7 @@ def user_ingredients():
         #keyword wird zur Liste der bereinigten Zutaten hinzugefügt, die für die Rezeptsuche
         #verwendet wird
 
-def find_recipes():
+def find_recipes(all_recipes):
 
     user_ing = user_ingredients()
 

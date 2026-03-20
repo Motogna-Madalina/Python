@@ -1,7 +1,7 @@
 from data_all_recipes import all_recipes
 from e_save_recipes import save_recipes
 
-def erase_recipe():
+def erase_recipe(all_recipes):
 
     print("\nRezept löschen")
 

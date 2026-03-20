@@ -55,7 +55,7 @@ def get_valid_instructions():
             return instructions
 
 
-def add_recipe():
+def add_recipe(all_recipes):
 
     print("\nNeues Rezept hinzufügen")
 

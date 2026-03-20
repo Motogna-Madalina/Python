@@ -13,3 +13,4 @@ def show_all_recipes(all_recipes):
         print("Anleitung:")
         print(details["anleitung"])
 
+

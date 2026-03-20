@@ -5,8 +5,9 @@ from d_erase_recipe import erase_recipe
 from e_save_recipes import save_recipes
 from a_show_recipes import * 
 from edit_recipe import edit_recipe
+import json
 
-
+all_recipes = load_json_file()
 
 #this is the main file that runs the recipe manager app.
 # It imports the necessary functions and data from other files and provides 
@@ -29,30 +30,30 @@ while True:
             show_all_recipes(all_recipes)
 
         elif choice == "B":
-            find_recipes()
+            find_recipes(all_recipes)
     
         elif choice == "C":
-            add_recipe()
+            add_recipe(all_recipes)
 
         elif choice == "D":
-            erase_recipe()
+            erase_recipe(all_recipes)
             
         elif choice == "E":
-             save_recipes()
-             print("Rezepte gespeichert!")
+            save_recipes(all_recipes)
+            print("Rezepte gespeichert!")
 
-    #    elif choice == "F":
-    #        load_recipes()
-    #        print("Rezepte geladen!")
+        elif choice == "F":
+            show_all_recipes(all_recipes)
+            print("Rezepte geladen!")
 
-    #    elif choice == "G":
-    #        edit_recipe()
+        #elif choice == "G":
+            #edit_recipe()
 
-    #    elif choice == "H":
-    #        print("Programm beendet. Auf Wiedersehen!")
-    #        break
+        elif choice == "H":
+            print("Programm beendet. Auf Wiedersehen!")
+            break
 
-     #   else:
-     #       print("Ungültige Auswahl.")
+        else:
+            print("Ungültige Auswahl.")
 
 
