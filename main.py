@@ -4,7 +4,7 @@ from b_user_ingredients import user_ingredients, find_recipes
 from d_erase_recipe import erase_recipe
 from e_save_recipes import save_recipes
 from a_show_recipes import * 
-from edit_recipe import edit_recipe
+from g_edit_recipe import edit_recipe
 import json
 
 all_recipes = load_json_file()
@@ -13,6 +13,7 @@ all_recipes = load_json_file()
 # It imports the necessary functions and data from other files and provides 
 # a menu for the user to interact with the app.
 #def menu_options():
+
 while True:
         print("\nRecipe Manager")
         print("A - Alle Rezepte anzeigen")
@@ -46,8 +47,8 @@ while True:
             show_all_recipes(all_recipes)
             print("Rezepte geladen!")
 
-        #elif choice == "G":
-            #edit_recipe()
+        elif choice == "G":
+            edit_recipe(all_recipes)
 
         elif choice == "H":
             print("Programm beendet. Auf Wiedersehen!")

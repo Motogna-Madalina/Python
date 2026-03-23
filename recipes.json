@@ -33,9 +33,16 @@
     },
     "Supe": {
         "zutaten": [
-            "Karotten",
-            "gemüse"
+            "Linse",
+            "karotten"
         ],
-        "anleitung": "Das und das"
+        "anleitung": "Neue rezepte"
+    },
+    "SUPPEEE": {
+        "zutaten": [
+            "Linte",
+            "mazare"
+        ],
+        "anleitung": "So lala"
     }
 }
