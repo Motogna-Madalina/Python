@@ -1,6 +1,7 @@
-from a_show_recipes import all_recipes
+from views.a_show_recipes import all_recipes
 
 def edit_recipe(all_recipes):
+        
         while True:
             print("\n--- Rezept bearbeiten ---")
             print("Rezeptbearbeitung- druck 1")
@@ -11,6 +12,7 @@ def edit_recipe(all_recipes):
                 
 
                 recipe_name = input("Geben Sie den Namen des Rezepts ein, das Sie bearbeiten möchten: ")
+
                 if recipe_name in all_recipes:
                     print(f"Wählen Sie die Option, die Sie bearbeiten möchten: ")
                     print("1 - Zutaten")
@@ -31,6 +33,7 @@ def edit_recipe(all_recipes):
                         new_instructions = input("Geben Sie die neuen Anweisungen ein: ")                                       
                         all_recipes[recipe_name]['anleitung'] = new_instructions.strip()
                         print(f"Rezept '{recipe_name}' wurde aktualisiert.")  
+
                     elif choice == "3":
                         print(f"Aktuelle Zutaten für {recipe_name}: {all_recipes[recipe_name]['zutaten']}")
                         new_ingredients = input("Geben Sie die neuen Zutaten ein (durch Kommas getrennt): ")
@@ -40,6 +43,7 @@ def edit_recipe(all_recipes):
                         new_instructions = input("Geben Sie die neuen Anweisungen ein: ")
                         all_recipes[recipe_name]['anleitung'] = new_instructions.strip()
                         print(f"Rezept '{recipe_name}' wurde aktualisiert.")
+
                     else:
                         print("Ungültige Auswahl.")
 

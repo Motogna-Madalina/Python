@@ -1,4 +1,4 @@
-from data_all_recipes import all_recipes
+from models.data_all_recipes import all_recipes
 
 def get_valid_name():
 

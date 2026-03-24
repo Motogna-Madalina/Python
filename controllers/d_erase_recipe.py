@@ -1,5 +1,5 @@
-from data_all_recipes import all_recipes
-from e_save_recipes import save_recipes
+from models.data_all_recipes import all_recipes
+from data.e_save_recipes import save_recipes
 
 def erase_recipe(all_recipes):
 

@@ -1,5 +1,5 @@
 
-from data_all_recipes import all_recipes
+from models.data_all_recipes import all_recipes
 # This file contains the function to get user input for ingredients
 # and clean it for recipe searching.
 

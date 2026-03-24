@@ -1,11 +1,11 @@
-from load_data import load_json_file
-from c_add_recipe import add_recipe
-from b_user_ingredients import user_ingredients, find_recipes
-from d_erase_recipe import erase_recipe
-from e_save_recipes import save_recipes
-from a_show_recipes import * 
-from g_edit_recipe import edit_recipe
-import json
+from data.load_data import load_json_file
+from controllers.c_add_recipe import add_recipe
+from controllers.b_user_ingredients import user_ingredients, find_recipes
+from controllers.d_erase_recipe import erase_recipe
+from data.e_save_recipes import save_recipes
+from views.a_show_recipes import * 
+from controllers.g_edit_recipe import edit_recipe
+
 
 all_recipes = load_json_file()
 
