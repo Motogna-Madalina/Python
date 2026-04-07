@@ -44,5 +44,19 @@
             "mazare"
         ],
         "anleitung": "So lala"
+    },
+    "PizzaMar": {
+        "zutaten": [
+            "mehl",
+            "wasser",
+            "salz"
+        ],
+        "anleitung": "sdadsa"
+    },
+    "esto": {
+        "zutaten": [
+            "etom esto"
+        ],
+        "anleitung": "dasda"
     }
 }

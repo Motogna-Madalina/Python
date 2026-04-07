@@ -14,6 +14,9 @@ all_recipes = load_json_file()
 # a menu for the user to interact with the app.
 #def menu_options():
 
+
+#we put as a parameter the all_recipes dictionary, so that we can use it in the functions that need it.
+
 while True:
         print("\nRecipe Manager")
         print("A - Alle Rezepte anzeigen")

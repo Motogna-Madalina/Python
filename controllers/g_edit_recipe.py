@@ -43,6 +43,11 @@ def edit_recipe(all_recipes):
                         new_instructions = input("Geben Sie die neuen Anweisungen ein: ")
                         all_recipes[recipe_name]['anleitung'] = new_instructions.strip()
                         print(f"Rezept '{recipe_name}' wurde aktualisiert.")
+                    
+                    elif choice == "4":
+                        print("Bearbeitung abgebrochen.")
+                        print("Rückkehr zum Hauptmenü.")
+                        break
 
                     else:
                         print("Ungültige Auswahl.")

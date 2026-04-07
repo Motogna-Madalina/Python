@@ -1,5 +1,6 @@
 from models.data_all_recipes import all_recipes
 
+
 def get_valid_name():
 
     while True:
@@ -69,5 +70,4 @@ def add_recipe(all_recipes):
     }
 
 
-    
     print(f"Rezept '{recipe_name}' wurde hinzugefügt!")
