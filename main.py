@@ -1,63 +1,56 @@
+
 from data.load_data import load_json_file
-from controllers.c_add_recipe import add_recipe
-from controllers.b_user_ingredients import user_ingredients, find_recipes
-from controllers.d_erase_recipe import erase_recipe
-from data.e_save_recipes import save_recipes
-from views.a_show_recipes import * 
-from controllers.g_edit_recipe import edit_recipe
+from controllers.b_add_task import add_task
+from data.q_save_data import save_data
+from views.a_show_tasks import show_all_tasks
+from controllers.c_edit_task import edit_status
+from controllers.d_find_task import *
+
+all_tasks = load_json_file()
 
 
-all_recipes = load_json_file()
+#our program is a simple task management system that allows the user to add tasks,
+#view all tasks, edit the status of a task, and search for tasks. The tasks 
+#are stored in a JSON file and loaded into a dictionary when the program starts.
 
-#this is the main file that runs the recipe manager app.
-# It imports the necessary functions and data from other files and provides 
-# a menu for the user to interact with the app.
-#def menu_options():
+#The user can interact with the program through a simple text-based menu. 
 
+#The program will continue to run until the user chooses to quit, 
+#at which point the data will be saved back to the JSON file.
 
-#we put as a parameter the all_recipes dictionary, so that we can use it in the functions that need it.
+#Thank you for your attention and I hope you enjoy using TaskHub to manage
+#your tasks and improve your organization!
 
 while True:
-        print("\nRecipe Manager")
-        print("A - Alle Rezepte anzeigen")
-        print("B - Rezepte basierend auf verfügbaren Zutaten finden")
-        print("C - Neues Rezept hinzufügen")
-        print("D - Rezepte löschen")
-        print("E - Rezepte speichern")
-        print("F - Rezepte laden")
-        print("G - Rezepte bearbeiten")
-        print("H - Programm beenden")
+        print("\nWillkommen bei TaskHub!")
+        print("\nDieses Programm hilft Ihnen dabei, Ihre Organisation zu verbessern.")
+        print("A - Alle Aufgaben anzeigen")
+        print("B - Neue Aufgabe hinzufügen")
+        print("C - Aufgabe als erledigt markieren / wieder öffnen")
+        print("D - Aufgaben suchen")
+        print("Q - Daten speichern und Programm beenden")
+        print("\nBitte wählen Sie eine Option aus: ")
 
         choice = input("Ihre Auswahl: ").upper()
 
         if choice == "A":
-            show_all_recipes(all_recipes)
+            show_all_tasks(all_tasks)
 
         elif choice == "B":
-            find_recipes(all_recipes)
+            add_task(all_tasks)
     
         elif choice == "C":
-            add_recipe(all_recipes)
+            edit_status(all_tasks)
 
         elif choice == "D":
-            erase_recipe(all_recipes)
-            
-        elif choice == "E":
-            save_recipes(all_recipes)
-            print("Rezepte gespeichert!")
+            find_tasks(all_tasks)
 
-        elif choice == "F":
-            show_all_recipes(all_recipes)
-            print("Rezepte geladen!")
-
-        elif choice == "G":
-            edit_recipe(all_recipes)
-
-        elif choice == "H":
-            print("Programm beendet. Auf Wiedersehen!")
+        elif choice == "Q":
+            save_data(all_tasks)
+            print("Daten gespeichert. Programm beendet!")
             break
 
         else:
-            print("Ungültige Auswahl.")
+            print("Ungültige Auswahl!")
 
 
